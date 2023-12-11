@@ -38,7 +38,11 @@ export default function RootLayout({
         />
         <link rel='manifest' href='/site.webmanifest' />
       </head>
-      <body className={clsx(GeistSans.className, " antialiased background")}>
+      <body
+        className={clsx(
+          GeistSans.className,
+          " antialiased background text-gray-950"
+        )}>
         <NavLinks />
         {children}
       </body>
