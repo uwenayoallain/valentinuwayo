@@ -13,7 +13,7 @@ export default function NavLinks() {
     { href: "#contact", label: "Contact" },
   ];
   return (
-    <nav className='sticky top-0'>
+    <nav className='sticky top-0 z-10'>
       <ul className='grid justify-between grid-cols-2 px-8 py-2'>
         <li>
           <Link href='/' className='text-xl font-bold text-white no-underline'>

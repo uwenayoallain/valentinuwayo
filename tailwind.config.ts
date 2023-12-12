@@ -8,7 +8,11 @@ const config: Config = {
   ],
   darkMode: "media",
   theme: {
-    extend: {},
+    extend: {
+      listStyleType: {
+        square: "square",
+      },
+    },
   },
   plugins: [],
 };

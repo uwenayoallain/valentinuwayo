@@ -1,3 +1,68 @@
+"use client";
+import {
+  Chart as ChartJS,
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Radar } from "react-chartjs-2";
+
+ChartJS.register(
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend
+);
+
+export const data = {
+  labels: ["Python", "SQL", "Tableau", "Power BI", "Excel", "R", "SPSS"],
+  datasets: [
+    {
+      label: "",
+      data: [100, 90, 100, 95, 100, 90, 95],
+      fill: true,
+      backgroundColor: "rgba(54, 162, 235, 0.2)",
+      borderColor: "rgb(54, 162, 235)",
+      pointBackgroundColor: "rgb(54, 162, 235)",
+      pointBorderColor: "#fff",
+      pointHoverBackgroundColor: "#fff",
+      pointHoverBorderColor: "rgb(54, 162, 235)",
+      borderWidth: 1.5,
+    },
+  ],
+};
+
+export function Chart() {
+  return (
+    <Radar
+      data={data}
+      options={{
+        scales: {
+          r: {
+            angleLines: {
+              display: true,
+            },
+            ticks: {
+              display: false,
+            },
+            suggestedMin: 0,
+            suggestedMax: 100,
+          },
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+        },
+      }}
+    />
+  );
+}
 export function Button({
   children,
   variant = "primary",

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import clsx from "clsx";
 import NavLinks from "./components/links";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
@@ -17,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className='scroll-smooth'>
       <head>
         <link
           rel='apple-touch-icon'
@@ -45,6 +47,8 @@ export default function RootLayout({
         )}>
         <NavLinks />
         {children}
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

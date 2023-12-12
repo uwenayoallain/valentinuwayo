@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { GeistMono } from "geist/font/mono";
 import clsx from "clsx";
-import { Button } from "./components/components";
+import { Button, Chart } from "./components/components";
 import Link from "next/link";
 
 export default function Home() {
@@ -62,7 +62,100 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className='absolute bottom-40 left-10'></div>
+        <div className='absolute bottom-40 left-10'>
+          <svg
+            width='16'
+            height='90'
+            viewBox='0 0 16 90'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
+            className=''>
+            <path
+              d='M7.2929 89.7071C7.68342 90.0976 8.31659 90.0976 8.70711 89.7071L15.0711 83.3431C15.4616 82.9526 15.4616 82.3195 15.0711 81.9289C14.6805 81.5384 14.0474 81.5384 13.6569 81.9289L8 87.5858L2.34315 81.9289C1.95263 81.5384 1.31946 81.5384 0.928936 81.9289C0.538411 82.3195 0.538412 82.9526 0.928936 83.3431L7.2929 89.7071ZM7 4.37114e-08L7 89L9 89L9 -4.37114e-08L7 4.37114e-08Z'
+              className='fill-gray-950'
+            />
+          </svg>
+        </div>
+      </section>
+      <section
+        className={
+          " h-full w-full relative min-h-screen bg-gray-950 text-white flex justify-center items-center"
+        }
+        id='about'>
+        <div className='w-full grid grid-cols-2 mx-10'>
+          <div>
+            <h2 className={"font-bold text-2xl mt-4 mb-10"}>About</h2>
+            <p className='font-light'>
+              As a data-driven problem solver, I am deeply passionate about
+              extracting insights from intricate datasets. With over{" "}
+              <strong>four</strong> years of extensive experience in data
+              management, analysis, and visualization, I have honed a robust
+              proficiency in data visualization, database management, and
+              handling large datasets with Python. My expertise includes
+              presenting complex data in an understandable manner, and I find
+              satisfaction in collaborating with cross-functional teams to drive
+              business decisions grounded in data-driven insights.
+            </p>
+          </div>
+          <div className='flex justify-center'>
+            <div className='bg-gray-100 px-2 py-4'>
+              <Image
+                src={"/profile.png"}
+                width={350}
+                height={350}
+                alt="uwayo valentin's profile picture"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        className='h-full w-full relative min-h-screen  flex justify-center items-center'
+        id='skills'>
+        <div className='w-full bg-white h-full mx-10 grid grid-cols-2'>
+          <div className='flex justify-center items-center'>
+            <div className='w-2/3'>
+              <Chart />
+            </div>
+          </div>
+          <div>
+            <h2 className={"font-bold text-2xl mt-4 mb-10"}>Skills</h2>
+            <div className='font-light'>
+              <p>
+                My set of skills that show my commitment to providing useful
+                insights and helping with well-informed decision-making.
+              </p>
+              <ul className='text-sm list-square my-2'>
+                <li>
+                  Proficient in statistical analysis software, including R and
+                  Python.
+                </li>
+                <li>
+                  Skilled in using data visualization and reporting tools such
+                  as Tableau, Excel, and PowerBI.
+                </li>
+                <li>
+                  Experienced in designing and conducting experiments, surveys,
+                  and data collection procedures in a retail environment.
+                </li>
+                <li>
+                  Proficient in database management systems, including SQL,
+                  Oracle, and MySQL.
+                </li>
+                <li>
+                  Strong knowledge of retail industry trends, marketing
+                  concepts, and customer behavior analysis.
+                </li>
+                <li>
+                  Possesses excellent analytical and problem-solving skills.
+                </li>
+                <li>
+                  Demonstrates strong communication and interpersonal skills.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   );
